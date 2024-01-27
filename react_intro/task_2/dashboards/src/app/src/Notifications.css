@@ -1,0 +1,47 @@
+.Notifications-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .Notifications {
+    border: 2px dotted #e14852;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .Notifications ul li[data-priority="default"] {
+    color: blue;
+  }
+  
+  .Notifications ul li[data-priority="urgent"] {
+    color: red;
+  }
+  
+  .Notifications img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .Notifications button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+  }
+  
+  .Notifications button::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
